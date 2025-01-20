@@ -7,6 +7,7 @@
     <title>Arrays en PHP</title>
 </head>
 
+
 <body>
     <h1>EJERCICO 1</h1>
     <?php
