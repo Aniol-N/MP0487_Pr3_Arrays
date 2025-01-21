@@ -47,9 +47,16 @@ function mostrarComicsEnTabla()
 
 function mostrarValorAlmacen()
 {
-    // pending
-}
+    global $inventario;
+    $valorAlmacen = 0;
 
+    foreach ($inventario as $categoria => $comics) {
+        foreach ($comics as $comic) {
+            $valorAlmacen += $comic['precio'] * $comic['stock'];
+        }
+    }
+    echo "<br> El valor total del almacen es: . $valorAlmacen <br>";
+}
 function aplicarDescuentoManga()
 {
     global $inventario;
@@ -60,6 +67,3 @@ function aplicarDescuentoManga()
         }
     }
 }
-?>
-
-
